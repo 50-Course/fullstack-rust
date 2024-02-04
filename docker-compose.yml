@@ -1,0 +1,12 @@
+services:
+  postgres_db:
+    image: postgres-12:alphine
+    container_name: postgres_db
+    environment:
+      - USERNAME:
+      - PORT:
+  web:
+    depends_on:
+        postgres_db
+
+
